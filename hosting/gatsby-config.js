@@ -1,36 +1,36 @@
 module.exports = {
   siteMetadata: {
-    title: 'duyet shorten url',
-    description: 'Shorten URL by Firebase Dynamic Link',
-    author: '@duyet',
+    title: "url-shortener",
+    description: "Shorten URL by Firebase Dynamic Link",
+    author: "@MauricioR998",
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
+    "gatsby-plugin-react-helmet",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'images',
+        name: "images",
         path: `${__dirname}/src/images`,
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sharp",
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: "gatsby-plugin-manifest",
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
-        start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
-        display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        name: "gatsby-starter-default",
+        short_name: "starter",
+        start_url: "/",
+        background_color: "#663399",
+        theme_color: "#663399",
+        display: "minimal-ui",
+        icon: "src/images/gatsby-icon.png", // This path is relative to the root of the site.
       },
     },
     {
-      resolve: 'gatsby-plugin-google-gtag',
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingIds: ['UA-92451506-6'],
+        trackingIds: ["UA-92451506-6"],
         pluginConfig: {
           head: true,
         },
@@ -38,7 +38,7 @@ module.exports = {
     },
   ],
   proxy: {
-    prefix: '/api',
-    url: 'http://localhost:5000',
+    prefix: "/api",
+    url: "http://localhost:5000",
   },
-};
+}
