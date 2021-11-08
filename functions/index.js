@@ -10,8 +10,7 @@ const db = admin.firestore();
 db.settings({ timestampsInSnapshots: true });
 
 const config = functions.config().config;
-// const apiKey = process.env.API_KEY || config.api_key || app.options_.apiKey
-const apiKey = config.api_key;
+const apiKey = process.env.API_KEY || config.api_key || app.options_.apiKey;
 const firebaseDynamicLinkApi = `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${apiKey}`;
 const domainUriPrefix = config.domain_uri_prefix;
 const URL_COLLECTION = config.url_collection || 'urls';
